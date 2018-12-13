@@ -48,6 +48,7 @@ typedef enum : NSUInteger {
 @property (nonatomic, assign) BOOL pauseByEvent;
 //视图是否消失
 @property (nonatomic, assign) BOOL viewControllerDisappear;
+@property (nonatomic, assign) BOOL isDrageing;
 
 //MARK: *********public*********
 - (instancetype)initWithUrl:(NSURL *)url;

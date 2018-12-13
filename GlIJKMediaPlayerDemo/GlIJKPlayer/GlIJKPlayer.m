@@ -11,6 +11,7 @@
 
 @interface GlIJKPlayer()
 @property (atomic, retain) id <IJKMediaPlayback> player;
+@property (nonatomic, assign) BOOL isTrackIng;
 @end
 
 @implementation GlIJKPlayer
@@ -19,11 +20,11 @@
     [super initBaseInfo];
     
 #ifdef DEBUG
-    [IJKFFMoviePlayerController setLogReport:NO];
-//    [IJKFFMoviePlayerController setLogLevel:k_IJK_LOG_ERROR];
+    [IJKFFMoviePlayerController setLogReport:YES];
+    [IJKFFMoviePlayerController setLogLevel:k_IJK_LOG_SILENT];
 #else
-    [IJKFFMoviePlayerController setLogReport:NO];
-//    [IJKFFMoviePlayerController setLogLevel:k_IJK_LOG_INFO];
+    [IJKFFMoviePlayerController setLogReport:YES];
+    [IJKFFMoviePlayerController setLogLevel:k_IJK_LOG_SILENT];
 #endif
     
     [IJKFFMoviePlayerController checkIfFFmpegVersionMatch:YES];
@@ -70,7 +71,10 @@
     [self trackTime:self.player.currentPlaybackTime];
     
     if (self.isPlaying) {
+        self.isTrackIng = YES;
         [self performSelector:@selector(refreTrackTime) withObject:nil afterDelay:1.0];
+    }else {
+        self.isTrackIng = NO;
     }
 }
 
@@ -148,7 +152,9 @@
         }
         case IJKMPMoviePlaybackStatePlaying: {
             NSLog(@"IJKMPMoviePlayBackStateDidChange %d: playing", (int)_player.playbackState);
-            [self refreTrackTime];
+            if (!self.isTrackIng) {
+                [self refreTrackTime];
+            }
             break;
         }
         case IJKMPMoviePlaybackStatePaused: {
@@ -162,6 +168,7 @@
         case IJKMPMoviePlaybackStateSeekingForward:
         case IJKMPMoviePlaybackStateSeekingBackward: {
             NSLog(@"IJKMPMoviePlayBackStateDidChange %d: seeking", (int)_player.playbackState);
+            [self changeEvent:GlPlayerEventBuffer value:nil];
             break;
         }
         default: {
@@ -208,9 +215,16 @@
 //MARK: SBControlViewDelegate
 -(void)controlView:(GlControlView *)controlView pointSliderLocationWithCurrentValue:(CGFloat)value{
     [super controlView:controlView pointSliderLocationWithCurrentValue:value];
-    CGFloat seekTime = self.player.duration * value;
+    NSLog(@"curent:%f",value);
+    CGFloat seekTime = value;//self.player.duration *
     self.player.currentPlaybackTime = seekTime;
     NSLog(@"seektoTime:%f",seekTime);
+}
+
+-(void)controlView:(GlControlView *)controlView draggedPositionWithSlider:(UISlider *)slider{
+    [super controlView:controlView draggedPositionWithSlider:slider];
+    
+    self.player.currentPlaybackTime = slider.value;
 }
 
 - (void)dealloc {

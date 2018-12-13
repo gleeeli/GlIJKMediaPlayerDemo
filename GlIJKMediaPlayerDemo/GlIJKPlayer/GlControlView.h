@@ -20,17 +20,17 @@
 
 /**
  拖拽UISlider的knob的时间响应代理方法
- 
- @param controlView 控制视图
- @param slider UISlider
  */
--(void)controlView:(GlControlView *)controlView draggedPositionWithSlider:(UISlider *)slider ;
+-(void)controlView:(GlControlView *)controlView draggedPositionWithSlider:(UISlider *)slider;
+
+
+/**
+ 拖拽开始
+ */
+-(void)controlView:(GlControlView *)controlView draggedStartWithSlider:(UISlider *)slider;
 
 /**
  点击放大按钮的响应事件
- 
- @param controlView 控制视图
- @param button 全屏按钮
  */
 -(void)controlView:(GlControlView *)controlView withLargeButton:(UIButton *)button;
 

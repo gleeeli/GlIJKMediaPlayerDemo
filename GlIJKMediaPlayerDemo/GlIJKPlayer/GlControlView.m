@@ -49,8 +49,10 @@ static NSInteger padding = 8;
         _playSlider = [[UISlider alloc]init];
         [_playSlider setThumbImage:[UIImage imageNamed:@"knob"] forState:UIControlStateNormal];
         _playSlider.continuous = YES;
-        self.tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(handleTap:)];
-        [_playSlider addTarget:self action:@selector(handleSliderPosition:) forControlEvents:UIControlEventValueChanged];
+        self.tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
+        //[_playSlider addTarget:self action:@selector(handleSliderPosition:) forControlEvents:UIControlEventValueChanged];
+        [_playSlider addTarget:self action:@selector(handleSliderPosition:) forControlEvents:UIControlEventTouchUpInside];
+        [_playSlider addTarget:self action:@selector(dragSliderStart:) forControlEvents:UIControlEventTouchDown];
         [_playSlider addGestureRecognizer:self.tapGesture];
         _playSlider.maximumTrackTintColor = [UIColor clearColor];
         _playSlider.minimumTrackTintColor = [UIColor whiteColor];
@@ -189,6 +191,12 @@ static NSInteger padding = 8;
     CGFloat currentValue = pointX/sliderWidth * self.playSlider.maximumValue;
     if ([self.delegate respondsToSelector:@selector(controlView:pointSliderLocationWithCurrentValue:)]) {
         [self.delegate controlView:self pointSliderLocationWithCurrentValue:currentValue];
+    }
+}
+
+- (void)dragSliderStart:(UISlider *)slider {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(controlView:draggedStartWithSlider:)]) {
+        [self.delegate controlView:self draggedStartWithSlider:slider];
     }
 }
 

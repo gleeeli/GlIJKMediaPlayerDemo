@@ -78,9 +78,13 @@ static NSInteger playingSecond = 0;
  @param currentTime 当前播放到的时间
  */
 - (void)trackTime:(CGFloat)currentTime {
+    if (self.isDrageing) {
+        return;
+    }
     self.controlView.value = currentTime;
     self.controlView.currentTime = [self convertTime:self.controlView.value];
-    if (playingSecond >= 5) {
+    if (playingSecond >= 10) {
+        NSLog(@"over 5 seconde GlCShowStatusHiddenAll");
         self.cShowStatus = GlCShowStatusHiddenAll;
     }
     playingSecond += 1;
@@ -163,10 +167,14 @@ static NSInteger playingSecond = 0;
 
 #pragma mark 点击空白
 -(void)handleTapAction:(UITapGestureRecognizer *)gesture{
+    if (self.isDrageing) {
+        return;
+    }
+    NSLog(@"handleTapAction ---  点击空白");
     if (self.cShowStatus == GlCShowStatusShowAll) {
         if (self.isPlaying) {
             self.cShowStatus = GlCShowStatusHiddenAll;
-            
+            NSLog(@"handleTapAction ---  GlCShowStatusHiddenAll");
         }else {
             self.cShowStatus = GlCShowStatusShowCenterPPBtn;
         }
@@ -263,6 +271,7 @@ static NSInteger playingSecond = 0;
             break;
         case GlCShowStatusHiddenAll:
         {
+            NSLog(@"inner --- GlCShowStatusHiddenAll");
             self.playOrPauseBtn.hidden = YES;
             [self setCommSubViewsIsHide:YES isAnimation:YES];
         }
@@ -359,24 +368,23 @@ static NSInteger playingSecond = 0;
             _status = GlPlayerStatusBuffering;
             if (!self.activityIndeView.isAnimating) {
                 [self.activityIndeView startAnimating];
-                self.cShowStatus = GlCShowStatusHiddenAll;
             }
         }
             break;
         case GlPlayerEventKeepUp:{
             NSLog(@"缓冲达到可播放");
             [self.activityIndeView stopAnimating];
-            if (!_isPlaying) {//
+            if (!self.isPlaying) {//
                 self.cShowStatus = GlCShowStatusShowCenterPPBtn;
             }
         }
             break;
         case GlPlayerEventRate:{
             if ([[value objectForKey:NSKeyValueChangeNewKey] integerValue] == 0) {
-                _isPlaying = false;
+                self.isPlaying = false;
                 _status = GlPlayerStatusPlaying;
             }else{
-                _isPlaying = true;
+                self.isPlaying = true;
                 _status = GlPlayerStatusStopped;
             }
         }
@@ -390,10 +398,19 @@ static NSInteger playingSecond = 0;
 //MARK: SBControlViewDelegate
 -(void)controlView:(GlControlView *)controlView pointSliderLocationWithCurrentValue:(CGFloat)value{
     playingSecond = 0;
+    self.isDrageing = NO;
 }
 
 -(void)controlView:(GlControlView *)controlView draggedPositionWithSlider:(UISlider *)slider{
     playingSecond = 0;
+    self.isDrageing = NO;
+}
+
+-(void)controlView:(GlControlView *)controlView draggedStartWithSlider:(UISlider *)slider {
+    playingSecond = 0;
+    self.isDrageing = YES;
+    
+    NSLog(@"------ 开始拖拽 ------");
 }
 
 -(void)controlView:(GlControlView *)controlView withLargeButton:(UIButton *)button{
@@ -467,7 +484,7 @@ static NSInteger playingSecond = 0;
 
 //MARK: 处理通知
 -(void)willResignActive:(NSNotification *)notification{
-    if (_isPlaying && self.pauseWhenAppResignActive) {
+    if (self.isPlaying && self.pauseWhenAppResignActive) {
         self.pNeedAutoPlay = YES;
         self.cShowStatus = GlCShowStatusShowCenterPPBtn;
         playingSecond = 0;

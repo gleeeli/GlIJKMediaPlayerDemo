@@ -28,6 +28,14 @@
     CGFloat widht = [UIScreen mainScreen].bounds.size.width;
     CGFloat height = widht / 16.0 * 9;
     self.player.frame = CGRectMake(0, 0, widht, height);
+    
+//    [self refreTrackTime];
+}
+
+- (void)refreTrackTime {
+    NSLog(@"play time:");
+    
+    [self performSelector:@selector(refreTrackTime) withObject:nil afterDelay:1.0];
 }
 
 
