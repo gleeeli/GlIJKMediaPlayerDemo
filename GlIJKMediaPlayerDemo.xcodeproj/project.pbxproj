@@ -1,0 +1,504 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		197984D421C0B4690036C551 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 197984D321C0B4680036C551 /* CoreMedia.framework */; };
+		197984D821C0B94B0036C551 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 197984D721C0B94B0036C551 /* libstdc++.tbd */; };
+		197984DC21C0F2F10036C551 /* GlPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 197984DB21C0F2F10036C551 /* GlPlayer.m */; };
+		197984DF21C0F3140036C551 /* GlIJKPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 197984DE21C0F3140036C551 /* GlIJKPlayer.m */; };
+		197984E221C0F87C0036C551 /* GlControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 197984E121C0F87C0036C551 /* GlControlView.m */; };
+		19BE1C3C21B68327005D0424 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19BE1C3B21B68327005D0424 /* AppDelegate.m */; };
+		19BE1C3F21B68327005D0424 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19BE1C3E21B68327005D0424 /* ViewController.m */; };
+		19BE1C4221B68327005D0424 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19BE1C4021B68327005D0424 /* Main.storyboard */; };
+		19BE1C4421B68328005D0424 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19BE1C4321B68328005D0424 /* Assets.xcassets */; };
+		19BE1C4721B68328005D0424 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19BE1C4521B68328005D0424 /* LaunchScreen.storyboard */; };
+		19BE1C4A21B68328005D0424 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 19BE1C4921B68328005D0424 /* main.m */; };
+		19BE1C5221B6836F005D0424 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19BE1C5121B6836F005D0424 /* IJKMediaFramework.framework */; };
+		19BE1C5521B684D9005D0424 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19BE1C5421B684D9005D0424 /* AudioToolbox.framework */; };
+		19BE1C5721B684E4005D0424 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19BE1C5621B684E4005D0424 /* AVFoundation.framework */; };
+		19BE1C5921B684EF005D0424 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19BE1C5821B684EF005D0424 /* CoreGraphics.framework */; };
+		19BE1C5B21B684F8005D0424 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19BE1C5A21B684F8005D0424 /* CoreVideo.framework */; };
+		19BE1C5D21B6850A005D0424 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 19BE1C5C21B6850A005D0424 /* libbz2.tbd */; };
+		19BE1C5F21B68532005D0424 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 19BE1C5E21B68532005D0424 /* libz.tbd */; };
+		19BE1C6121B6853D005D0424 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19BE1C6021B6853D005D0424 /* MediaPlayer.framework */; };
+		19BE1C6321B68548005D0424 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19BE1C6221B68548005D0424 /* MobileCoreServices.framework */; };
+		19BE1C6521B68554005D0424 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19BE1C6421B68554005D0424 /* OpenGLES.framework */; };
+		19BE1C6721B68563005D0424 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19BE1C6621B68563005D0424 /* QuartzCore.framework */; };
+		19BE1C6921B6856E005D0424 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19BE1C6821B6856E005D0424 /* UIKit.framework */; };
+		19BE1C6B21B68579005D0424 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19BE1C6A21B68579005D0424 /* VideoToolbox.framework */; };
+		1C8CFA6052BCF369CDA3EB5E /* libPods-GlIJKMediaPlayerDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E14A67EA3789A20430094596 /* libPods-GlIJKMediaPlayerDemo.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		197984D321C0B4680036C551 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		197984D721C0B94B0036C551 /* libstdc++.tbd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.text-based-dylib-definition"; path = "libstdc++.tbd"; sourceTree = "<group>"; };
+		197984DA21C0F2F10036C551 /* GlPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlPlayer.h; sourceTree = "<group>"; };
+		197984DB21C0F2F10036C551 /* GlPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlPlayer.m; sourceTree = "<group>"; };
+		197984DD21C0F3140036C551 /* GlIJKPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlIJKPlayer.h; sourceTree = "<group>"; };
+		197984DE21C0F3140036C551 /* GlIJKPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlIJKPlayer.m; sourceTree = "<group>"; };
+		197984E021C0F87C0036C551 /* GlControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlControlView.h; sourceTree = "<group>"; };
+		197984E121C0F87C0036C551 /* GlControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlControlView.m; sourceTree = "<group>"; };
+		197984E321C0FB320036C551 /* GlCommHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlCommHeader.h; sourceTree = "<group>"; };
+		19BE1C3721B68327005D0424 /* GlIJKMediaPlayerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GlIJKMediaPlayerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		19BE1C3A21B68327005D0424 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		19BE1C3B21B68327005D0424 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		19BE1C3D21B68327005D0424 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		19BE1C3E21B68327005D0424 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		19BE1C4121B68327005D0424 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		19BE1C4321B68328005D0424 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		19BE1C4621B68328005D0424 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		19BE1C4821B68328005D0424 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19BE1C4921B68328005D0424 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		19BE1C5121B6836F005D0424 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
+		19BE1C5421B684D9005D0424 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		19BE1C5621B684E4005D0424 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		19BE1C5821B684EF005D0424 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		19BE1C5A21B684F8005D0424 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		19BE1C5C21B6850A005D0424 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
+		19BE1C5E21B68532005D0424 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		19BE1C6021B6853D005D0424 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		19BE1C6221B68548005D0424 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		19BE1C6421B68554005D0424 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		19BE1C6621B68563005D0424 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		19BE1C6821B6856E005D0424 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		19BE1C6A21B68579005D0424 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		19BE1C6C21B685B5005D0424 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		1B40C76DDB9415642A87F94F /* Pods-GlIJKMediaPlayerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GlIJKMediaPlayerDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-GlIJKMediaPlayerDemo/Pods-GlIJKMediaPlayerDemo.release.xcconfig"; sourceTree = "<group>"; };
+		8123E7FC2594D792CBD3D20F /* Pods-GlIJKMediaPlayerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GlIJKMediaPlayerDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GlIJKMediaPlayerDemo/Pods-GlIJKMediaPlayerDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		E14A67EA3789A20430094596 /* libPods-GlIJKMediaPlayerDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GlIJKMediaPlayerDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		19BE1C3421B68327005D0424 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				197984D421C0B4690036C551 /* CoreMedia.framework in Frameworks */,
+				19BE1C6B21B68579005D0424 /* VideoToolbox.framework in Frameworks */,
+				197984D821C0B94B0036C551 /* libstdc++.tbd in Frameworks */,
+				19BE1C6921B6856E005D0424 /* UIKit.framework in Frameworks */,
+				19BE1C6721B68563005D0424 /* QuartzCore.framework in Frameworks */,
+				19BE1C6521B68554005D0424 /* OpenGLES.framework in Frameworks */,
+				19BE1C6321B68548005D0424 /* MobileCoreServices.framework in Frameworks */,
+				19BE1C6121B6853D005D0424 /* MediaPlayer.framework in Frameworks */,
+				19BE1C5F21B68532005D0424 /* libz.tbd in Frameworks */,
+				19BE1C5D21B6850A005D0424 /* libbz2.tbd in Frameworks */,
+				19BE1C5B21B684F8005D0424 /* CoreVideo.framework in Frameworks */,
+				19BE1C5921B684EF005D0424 /* CoreGraphics.framework in Frameworks */,
+				19BE1C5721B684E4005D0424 /* AVFoundation.framework in Frameworks */,
+				19BE1C5521B684D9005D0424 /* AudioToolbox.framework in Frameworks */,
+				19BE1C5221B6836F005D0424 /* IJKMediaFramework.framework in Frameworks */,
+				1C8CFA6052BCF369CDA3EB5E /* libPods-GlIJKMediaPlayerDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		197984D921C0F0710036C551 /* GlIJKPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				197984E321C0FB320036C551 /* GlCommHeader.h */,
+				197984DA21C0F2F10036C551 /* GlPlayer.h */,
+				197984DB21C0F2F10036C551 /* GlPlayer.m */,
+				197984DD21C0F3140036C551 /* GlIJKPlayer.h */,
+				197984DE21C0F3140036C551 /* GlIJKPlayer.m */,
+				197984E021C0F87C0036C551 /* GlControlView.h */,
+				197984E121C0F87C0036C551 /* GlControlView.m */,
+			);
+			path = GlIJKPlayer;
+			sourceTree = "<group>";
+		};
+		19BE1C2E21B68327005D0424 = {
+			isa = PBXGroup;
+			children = (
+				19BE1C3921B68327005D0424 /* GlIJKMediaPlayerDemo */,
+				19BE1C3821B68327005D0424 /* Products */,
+				19BE1C5321B684D9005D0424 /* Frameworks */,
+				5FCEEF357A169FD3BF547641 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		19BE1C3821B68327005D0424 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				19BE1C3721B68327005D0424 /* GlIJKMediaPlayerDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		19BE1C3921B68327005D0424 /* GlIJKMediaPlayerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				197984D921C0F0710036C551 /* GlIJKPlayer */,
+				19BE1C5021B68357005D0424 /* IJK */,
+				19BE1C3A21B68327005D0424 /* AppDelegate.h */,
+				19BE1C3B21B68327005D0424 /* AppDelegate.m */,
+				19BE1C3D21B68327005D0424 /* ViewController.h */,
+				19BE1C3E21B68327005D0424 /* ViewController.m */,
+				19BE1C4021B68327005D0424 /* Main.storyboard */,
+				19BE1C4321B68328005D0424 /* Assets.xcassets */,
+				19BE1C4521B68328005D0424 /* LaunchScreen.storyboard */,
+				19BE1C4821B68328005D0424 /* Info.plist */,
+				19BE1C4921B68328005D0424 /* main.m */,
+			);
+			path = GlIJKMediaPlayerDemo;
+			sourceTree = "<group>";
+		};
+		19BE1C5021B68357005D0424 /* IJK */ = {
+			isa = PBXGroup;
+			children = (
+				19BE1C5121B6836F005D0424 /* IJKMediaFramework.framework */,
+			);
+			path = IJK;
+			sourceTree = "<group>";
+		};
+		19BE1C5321B684D9005D0424 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				197984D721C0B94B0036C551 /* libstdc++.tbd */,
+				197984D321C0B4680036C551 /* CoreMedia.framework */,
+				19BE1C6C21B685B5005D0424 /* libstdc++.6.0.9.tbd */,
+				19BE1C6A21B68579005D0424 /* VideoToolbox.framework */,
+				19BE1C6821B6856E005D0424 /* UIKit.framework */,
+				19BE1C6621B68563005D0424 /* QuartzCore.framework */,
+				19BE1C6421B68554005D0424 /* OpenGLES.framework */,
+				19BE1C6221B68548005D0424 /* MobileCoreServices.framework */,
+				19BE1C6021B6853D005D0424 /* MediaPlayer.framework */,
+				19BE1C5E21B68532005D0424 /* libz.tbd */,
+				19BE1C5C21B6850A005D0424 /* libbz2.tbd */,
+				19BE1C5A21B684F8005D0424 /* CoreVideo.framework */,
+				19BE1C5821B684EF005D0424 /* CoreGraphics.framework */,
+				19BE1C5621B684E4005D0424 /* AVFoundation.framework */,
+				19BE1C5421B684D9005D0424 /* AudioToolbox.framework */,
+				E14A67EA3789A20430094596 /* libPods-GlIJKMediaPlayerDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5FCEEF357A169FD3BF547641 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8123E7FC2594D792CBD3D20F /* Pods-GlIJKMediaPlayerDemo.debug.xcconfig */,
+				1B40C76DDB9415642A87F94F /* Pods-GlIJKMediaPlayerDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		19BE1C3621B68327005D0424 /* GlIJKMediaPlayerDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19BE1C4D21B68328005D0424 /* Build configuration list for PBXNativeTarget "GlIJKMediaPlayerDemo" */;
+			buildPhases = (
+				59835438205B2B6B1FA5BABC /* [CP] Check Pods Manifest.lock */,
+				19BE1C3321B68327005D0424 /* Sources */,
+				19BE1C3421B68327005D0424 /* Frameworks */,
+				19BE1C3521B68327005D0424 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GlIJKMediaPlayerDemo;
+			productName = GlIJKMediaPlayerDemo;
+			productReference = 19BE1C3721B68327005D0424 /* GlIJKMediaPlayerDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		19BE1C2F21B68327005D0424 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = gleeeli;
+				TargetAttributes = {
+					19BE1C3621B68327005D0424 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+				};
+			};
+			buildConfigurationList = 19BE1C3221B68327005D0424 /* Build configuration list for PBXProject "GlIJKMediaPlayerDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 19BE1C2E21B68327005D0424;
+			productRefGroup = 19BE1C3821B68327005D0424 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				19BE1C3621B68327005D0424 /* GlIJKMediaPlayerDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		19BE1C3521B68327005D0424 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19BE1C4721B68328005D0424 /* LaunchScreen.storyboard in Resources */,
+				19BE1C4421B68328005D0424 /* Assets.xcassets in Resources */,
+				19BE1C4221B68327005D0424 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		59835438205B2B6B1FA5BABC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GlIJKMediaPlayerDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		19BE1C3321B68327005D0424 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				197984DF21C0F3140036C551 /* GlIJKPlayer.m in Sources */,
+				197984E221C0F87C0036C551 /* GlControlView.m in Sources */,
+				19BE1C3F21B68327005D0424 /* ViewController.m in Sources */,
+				197984DC21C0F2F10036C551 /* GlPlayer.m in Sources */,
+				19BE1C4A21B68328005D0424 /* main.m in Sources */,
+				19BE1C3C21B68327005D0424 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		19BE1C4021B68327005D0424 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19BE1C4121B68327005D0424 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		19BE1C4521B68328005D0424 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19BE1C4621B68328005D0424 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		19BE1C4B21B68328005D0424 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		19BE1C4C21B68328005D0424 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		19BE1C4E21B68328005D0424 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8123E7FC2594D792CBD3D20F /* Pods-GlIJKMediaPlayerDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GlIJKMediaPlayerDemo/IJK",
+				);
+				INFOPLIST_FILE = GlIJKMediaPlayerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = gleeeli.GlIJKMediaPlayerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		19BE1C4F21B68328005D0424 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B40C76DDB9415642A87F94F /* Pods-GlIJKMediaPlayerDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GlIJKMediaPlayerDemo/IJK",
+				);
+				INFOPLIST_FILE = GlIJKMediaPlayerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = gleeeli.GlIJKMediaPlayerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		19BE1C3221B68327005D0424 /* Build configuration list for PBXProject "GlIJKMediaPlayerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19BE1C4B21B68328005D0424 /* Debug */,
+				19BE1C4C21B68328005D0424 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19BE1C4D21B68328005D0424 /* Build configuration list for PBXNativeTarget "GlIJKMediaPlayerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19BE1C4E21B68328005D0424 /* Debug */,
+				19BE1C4F21B68328005D0424 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 19BE1C2F21B68327005D0424 /* Project object */;
+}
